@@ -1,0 +1,1140 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zakaria Hallaji — Mobile Developer | Kotlin &amp; Flutter</title>
+    <meta
+      name="description"
+      content="Portfolio de Zakaria Hallaji, Développeur Mobile spécialisé en Kotlin, Android et Flutter basé à Marrakech, Maroc. Conception d'applications mobiles performantes, plateformes SaaS et intégration d'APIs."
+    />
+    <meta name="author" content="Zakaria Hallaji" />
+    <link rel="canonical" href="https://github.com/ZakHallaji" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Zakaria Hallaji — Mobile Developer | Kotlin &amp; Flutter" />
+    <meta
+      property="og:description"
+      content="Portfolio de Zakaria Hallaji, Développeur Mobile spécialisé en Kotlin, Android et Flutter basé à Marrakech, Maroc."
+    />
+    <meta property="og:image" content="assets/images/mobibiz.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Zakaria Hallaji — Mobile Developer | Kotlin &amp; Flutter" />
+    <meta
+      name="twitter:description"
+      content="Portfolio de Zakaria Hallaji, Développeur Mobile spécialisé en Kotlin, Android et Flutter."
+    />
+    <meta name="twitter:image" content="assets/images/mobibiz.jpg" />
+
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- JSON-LD Structured Data Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Zakaria Hallaji",
+        "jobTitle": "Mobile Developer",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Marrakech",
+          "addressCountry": "Morocco"
+        },
+        "email": "zakariaehallaji@gmail.com",
+        "url": "https://github.com/ZakHallaji",
+        "sameAs": [
+          "https://github.com/ZakHallaji"
+        ],
+        "knowsAbout": [
+          "Kotlin",
+          "Android Development",
+          "Flutter",
+          "Dart",
+          "FastAPI",
+          "REST APIs",
+          "Firebase",
+          "MySQL",
+          "SaaS Architecture"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Custom Cursor (Desktop Only) -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-outline" aria-hidden="true"></div>
+
+    <!-- 1. Navigation Header (Top Bar Contract: 3 Zones) -->
+    <header class="site-header">
+      <div class="container nav-container">
+        <!-- Zone 1: Wordmark Brand -->
+        <a href="#hero" class="nav-brand" aria-label="Zakaria Hallaji — Accueil">
+          <span class="nav-brand-dot"></span>
+          <span>Zakaria Hallaji</span>
+        </a>
+
+        <!-- Zone 2: Navigation Links -->
+        <nav class="nav-links" aria-label="Navigation principale">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#work" class="nav-link">Work</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Zone 3: Primary Action -->
+        <div class="nav-actions">
+          <a href="#contact" class="btn-talk">
+            <span>Let's talk</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <button class="menu-toggle" aria-label="Ouvrir le menu mobile" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-menu" aria-label="Menu de navigation mobile">
+      <div class="mobile-menu-links">
+        <a href="#about" class="mobile-nav-link">01. About</a>
+        <a href="#skills" class="mobile-nav-link">02. Stack</a>
+        <a href="#work" class="mobile-nav-link">03. Selected Work</a>
+        <a href="#experience" class="mobile-nav-link">04. Experience</a>
+        <a href="#contact" class="mobile-nav-link">05. Contact</a>
+      </div>
+      <div style="display: flex; gap: 1rem; flex-direction: column;">
+        <button class="btn-primary btn-open-cv" style="justify-content: center;">Consulter le CV</button>
+        <a href="https://github.com/ZakHallaji" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="justify-content: center;">
+          GitHub Profil
+        </a>
+      </div>
+    </div>
+
+    <main>
+      <!-- 2. Hero Section -->
+      <section id="hero" class="hero-section">
+        <div class="container hero-content">
+          <!-- Status & Location Bar -->
+          <div class="hero-meta-bar">
+            <div class="hero-status">
+              <span class="status-beacon"></span>
+              <span>OPEN TO OPPORTUNITIES</span>
+            </div>
+            <div class="hero-location">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Marrakech, Morocco</span>
+            </div>
+          </div>
+
+          <!-- Kicker -->
+          <p class="hero-kicker">HELLO, I'M ZAKARIA</p>
+
+          <!-- Main Headline -->
+          <h1 class="hero-headline">
+            I BUILD MOBILE<br />
+            EXPERIENCES THAT<br />
+            <span class="headline-accent">FEEL SIMPLE.</span>
+          </h1>
+
+          <!-- Subrow: Role, Dynamic Words, CTAs -->
+          <div class="hero-subrow">
+            <div class="hero-description-block">
+              <h2 class="hero-role-title">Mobile Developer &amp; Product Engineer</h2>
+              <div class="hero-dynamic-words">
+                <span>Specialized in</span>
+                <span class="rotator-wrapper">
+                  <span class="rotator-word active">Kotlin</span>
+                  <span class="rotator-word">Flutter</span>
+                  <span class="rotator-word">Android</span>
+                  <span class="rotator-word">REST APIs</span>
+                  <span class="rotator-word">SaaS</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <a href="#work" class="btn-primary">
+                <span>View my work</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+              </a>
+              <button class="btn-secondary btn-open-cv">
+                <span>Download CV</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
+              <a href="https://github.com/ZakHallaji" target="_blank" rel="noopener noreferrer" class="btn-text-link">
+                <span>GitHub</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Creative Editorial Introduction -->
+      <section class="intro-section">
+        <div class="container intro-grid">
+          <div class="reveal-on-scroll">
+            <h2 class="intro-quote">
+              "I turn ideas into <span class="intro-quote-highlight">functional digital products</span>."
+            </h2>
+          </div>
+          <div class="intro-details reveal-on-scroll">
+            <p class="intro-body-text">
+              Développeur mobile spécialisé en Kotlin et Flutter, avec une expérience pratique dans la création d'applications Android, de plateformes SaaS et de solutions connectées à des APIs.
+            </p>
+            <div class="intro-keywords-ribbon" aria-label="Domaines d'expertise">
+              <span class="intro-keyword">MOBILE</span>
+              <span class="intro-keyword">ANDROID</span>
+              <span class="intro-keyword">KOTLIN</span>
+              <span class="intro-keyword">FLUTTER</span>
+              <span class="intro-keyword">REST API</span>
+              <span class="intro-keyword">SAAS</span>
+              <span class="intro-keyword">FIREBASE</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. About Section (Chapter 01) -->
+      <section id="about" class="editorial-section">
+        <div class="container">
+          <div class="section-chapter">
+            <span class="chapter-number">01 / ABOUT</span>
+            <span class="chapter-title">Profile &amp; Foundation</span>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-bio reveal-on-scroll">
+              <p class="about-paragraph">
+                Je suis <strong>Zakaria Hallaji</strong>, développeur mobile orienté produit, spécialisé dans <strong>Kotlin</strong>, <strong>Android</strong> et <strong>Flutter</strong>.
+              </p>
+              <p class="about-paragraph">
+                Je m'intéresse particulièrement aux applications mobiles modernes, aux APIs, aux plateformes SaaS et aux outils qui résolvent de vrais problèmes du quotidien pour les utilisateurs et les entreprises.
+              </p>
+              <p class="about-paragraph">
+                Basé à Marrakech, j'aborde le développement avec un regard pragmatique: concevoir des architectures claires (MVVM, Clean Code), garantir une expérience utilisateur fluide sans latence, et maintenir une intégration réseau irréprochable avec les backends.
+              </p>
+            </div>
+
+            <div class="about-creds-card reveal-on-scroll">
+              <div class="card-kicker">Formation Académique</div>
+              <h3 class="cred-title">Technicien Spécialisé — Développement Digital</h3>
+              <p class="cred-institution">OFPPT Marrakech · Option Web &amp; Mobile</p>
+              
+              <div class="cred-bullets">
+                <div class="cred-bullet-item">
+                  <span class="bullet-icon">→</span>
+                  <span>Conception et développement d'applications mobiles Android natives avec Kotlin &amp; XML.</span>
+                </div>
+                <div class="cred-bullet-item">
+                  <span class="bullet-icon">→</span>
+                  <span>Modélisation de bases de données relationnelles SQL et consommation d'APIs REST.</span>
+                </div>
+                <div class="cred-bullet-item">
+                  <span class="bullet-icon">→</span>
+                  <span>Pratiques rigoureuses de gestion de version (Git/GitHub) et tests applicatifs.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Tech Stack Section (Chapter 02) -->
+      <section id="skills" class="editorial-section" style="background: #0d0e12; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+        <div class="container">
+          <div class="section-chapter">
+            <span class="chapter-number">02 / STACK</span>
+            <span class="chapter-title">Interactive Technology System</span>
+          </div>
+
+          <div class="section-header">
+            <h2 class="section-title">Core Engineering Capabilities</h2>
+            <p class="section-subtitle">
+              Pas de barres de pourcentage arbitraires. Voici les technologies que j'utilise concrètement pour concevoir des applications mobiles et web robustes.
+            </p>
+          </div>
+
+          <!-- 4 Main Categories Grid -->
+          <div class="stack-categories-grid">
+            <!-- Mobile Category -->
+            <div class="stack-category-block reveal-on-scroll">
+              <div class="category-header">
+                <span class="category-name">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                  </svg>
+                  MOBILE
+                </span>
+                <span class="category-count">6 Technologies</span>
+              </div>
+              <div class="tech-pills-flow">
+                <button class="tech-pill active" data-tech="Kotlin"><span class="tech-pill-dot"></span>Kotlin</button>
+                <button class="tech-pill" data-tech="Android SDK"><span class="tech-pill-dot"></span>Android SDK</button>
+                <button class="tech-pill" data-tech="XML Layouts"><span class="tech-pill-dot"></span>XML Layouts</button>
+                <button class="tech-pill" data-tech="Flutter"><span class="tech-pill-dot"></span>Flutter</button>
+                <button class="tech-pill" data-tech="Dart"><span class="tech-pill-dot"></span>Dart</button>
+                <button class="tech-pill" data-tech="Firebase"><span class="tech-pill-dot"></span>Firebase</button>
+              </div>
+            </div>
+
+            <!-- Web & Frontend Category -->
+            <div class="stack-category-block reveal-on-scroll">
+              <div class="category-header">
+                <span class="category-name">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                  WEB &amp; FRONTEND
+                </span>
+                <span class="category-count">4 Technologies</span>
+              </div>
+              <div class="tech-pills-flow">
+                <button class="tech-pill" data-tech="HTML5 / CSS3"><span class="tech-pill-dot"></span>HTML5 / CSS3</button>
+                <button class="tech-pill" data-tech="JavaScript (ES6+)"><span class="tech-pill-dot"></span>JavaScript (ES6+)</button>
+                <button class="tech-pill" data-tech="PHP"><span class="tech-pill-dot"></span>PHP</button>
+                <button class="tech-pill" data-tech="REST APIs"><span class="tech-pill-dot"></span>Client HTTP / Fetch</button>
+              </div>
+            </div>
+
+            <!-- Backend & Data Category -->
+            <div class="stack-category-block reveal-on-scroll">
+              <div class="category-header">
+                <span class="category-name">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  </svg>
+                  BACKEND &amp; DATA
+                </span>
+                <span class="category-count">5 Technologies</span>
+              </div>
+              <div class="tech-pills-flow">
+                <button class="tech-pill" data-tech="Python"><span class="tech-pill-dot"></span>Python</button>
+                <button class="tech-pill" data-tech="FastAPI"><span class="tech-pill-dot"></span>FastAPI</button>
+                <button class="tech-pill" data-tech="REST APIs"><span class="tech-pill-dot"></span>REST APIs</button>
+                <button class="tech-pill" data-tech="MySQL / SQL"><span class="tech-pill-dot"></span>MySQL / SQL</button>
+                <button class="tech-pill" data-tech="Android SDK"><span class="tech-pill-dot"></span>SQLite / Room</button>
+              </div>
+            </div>
+
+            <!-- Tools & Workflow Category -->
+            <div class="stack-category-block reveal-on-scroll">
+              <div class="category-header">
+                <span class="category-name">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                  </svg>
+                  TOOLS &amp; WORKFLOW
+                </span>
+                <span class="category-count">5 Tools</span>
+              </div>
+              <div class="tech-pills-flow">
+                <button class="tech-pill" data-tech="Android Studio"><span class="tech-pill-dot"></span>Android Studio</button>
+                <button class="tech-pill" data-tech="Git &amp; GitHub"><span class="tech-pill-dot"></span>Git &amp; GitHub</button>
+                <button class="tech-pill" data-tech="Postman"><span class="tech-pill-dot"></span>Postman</button>
+                <button class="tech-pill" data-tech="Figma"><span class="tech-pill-dot"></span>Figma</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Technology Inspector Box -->
+          <div class="stack-inspector-pane reveal-on-scroll" aria-live="polite">
+            <div class="inspector-meta">
+              <span id="inspector-tech-name" class="inspector-title">Kotlin</span>
+              <span id="inspector-tech-desc" class="inspector-desc">
+                Modern, expressive Android language. Experience with Coroutines, Flow, MVVM architecture, and clean code principles.
+              </span>
+            </div>
+            <span class="inspector-hint">Hover tech pill to inspect →</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Featured Projects Section (Chapter 03) -->
+      <section id="work" class="editorial-section">
+        <div class="container">
+          <div class="section-chapter">
+            <span class="chapter-number">03 / WORK</span>
+            <span class="chapter-title">Selected Case Studies</span>
+          </div>
+
+          <div class="section-header">
+            <h2 class="section-title">Selected Work</h2>
+            <p class="section-subtitle">
+              Projects I've designed, built and shipped — du code Android natif aux architectures backend complètes.
+            </p>
+          </div>
+
+          <div class="projects-showcase-flow">
+            <!-- PROJECT 01: MobiBiz Maroc (HERO PROJECT) -->
+            <article class="project-editorial-card reveal-on-scroll" data-project-id="mobibiz">
+              <div class="project-narrative">
+                <div class="project-index-row">
+                  <span class="project-number">01</span>
+                  <span class="project-category">Mobile Application / Commercial Management</span>
+                </div>
+                <h3 class="project-card-title">MobiBiz Maroc</h3>
+                <p class="project-card-desc">
+                  Application mobile native de gestion commerciale permettant de gérer produits, ventes, clients, dépenses quotidiennes et facturation avec synchronisation d'API en temps réel.
+                </p>
+
+                <!-- Zero-pill metadata with typographic separators -->
+                <div class="project-tech-meta">
+                  <span class="tech-highlight">Kotlin</span>
+                  <span class="meta-separator">·</span>
+                  <span class="tech-highlight">Android SDK</span>
+                  <span class="meta-separator">·</span>
+                  <span>Retrofit</span>
+                  <span class="meta-separator">·</span>
+                  <span>FastAPI</span>
+                  <span class="meta-separator">·</span>
+                  <span>MySQL</span>
+                </div>
+
+                <div class="project-actions-row">
+                  <button class="btn-primary" data-project-trigger="mobibiz">
+                    <span>View Case Study</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </button>
+                  <a href="https://github.com/ZakHallaji" target="_blank" rel="noopener noreferrer" class="btn-text-link">
+                    <span>GitHub Code</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-visual-frame" data-project-trigger="mobibiz">
+                <span class="project-badge-featured">Featured Hero Project</span>
+                <img
+                  src="assets/images/mobibiz.jpg"
+                  alt="Application MobiBiz Maroc — Interface mobile et tableau de bord commercial"
+                  class="project-mockup-img"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+            </article>
+
+            <!-- PROJECT 02: Social Media Manager SaaS -->
+            <article class="project-editorial-card reverse reveal-on-scroll" data-project-id="social-saas">
+              <div class="project-narrative">
+                <div class="project-index-row">
+                  <span class="project-number">02</span>
+                  <span class="project-category">SaaS Platform / Content Operations</span>
+                </div>
+                <h3 class="project-card-title">Social Media Manager SaaS</h3>
+                <p class="project-card-desc">
+                  Plateforme SaaS conçue pour simplifier la planification, la publication et l'organisation des contenus multi-plateformes pour créateurs et équipes marketing.
+                </p>
+
+                <div class="project-tech-meta">
+                  <span class="tech-highlight">JavaScript</span>
+                  <span class="meta-separator">·</span>
+                  <span class="tech-highlight">HTML5 / CSS3</span>
+                  <span class="meta-separator">·</span>
+                  <span>REST API</span>
+                  <span class="meta-separator">·</span>
+                  <span>Relational Database</span>
+                </div>
+
+                <div class="project-actions-row">
+                  <button class="btn-primary" data-project-trigger="social-saas">
+                    <span>View Case Study</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </button>
+                  <a href="https://github.com/ZakHallaji" target="_blank" rel="noopener noreferrer" class="btn-text-link">
+                    <span>GitHub Code</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-visual-frame" data-project-trigger="social-saas">
+                <img
+                  src="assets/images/saas-social.jpg"
+                  alt="Social Media Manager SaaS — Calendrier éditorial et tableau de bord"
+                  class="project-mockup-img"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+            </article>
+
+            <!-- PROJECT 03: PDF Update Platform -->
+            <article class="project-editorial-card reveal-on-scroll" data-project-id="pdf-platform">
+              <div class="project-narrative">
+                <div class="project-index-row">
+                  <span class="project-number">03</span>
+                  <span class="project-category">SaaS / Web Application</span>
+                </div>
+                <h3 class="project-card-title">PDF Update Platform</h3>
+                <p class="project-card-desc">
+                  Plateforme permettant de modifier, combiner, réorganiser et gérer des documents PDF depuis une interface web fluide avec prévisualisation Canvas et traitement Python.
+                </p>
+
+                <div class="project-tech-meta">
+                  <span class="tech-highlight">JavaScript</span>
+                  <span class="meta-separator">·</span>
+                  <span class="tech-highlight">Python</span>
+                  <span class="meta-separator">·</span>
+                  <span>PDF Engine</span>
+                  <span class="meta-separator">·</span>
+                  <span>REST API</span>
+                </div>
+
+                <div class="project-actions-row">
+                  <button class="btn-primary" data-project-trigger="pdf-platform">
+                    <span>View Case Study</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </button>
+                  <a href="https://github.com/ZakHallaji" target="_blank" rel="noopener noreferrer" class="btn-text-link">
+                    <span>GitHub Code</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-visual-frame" data-project-trigger="pdf-platform">
+                <img
+                  src="assets/images/pdf-platform.jpg"
+                  alt="PDF Update Platform — Espace de réorganisation et édition de documents"
+                  class="project-mockup-img"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+            </article>
+
+            <!-- PROJECT 04: OFPPT Mobile Application -->
+            <article class="project-editorial-card reverse reveal-on-scroll" data-project-id="ofppt-app">
+              <div class="project-narrative">
+                <div class="project-index-row">
+                  <span class="project-number">04</span>
+                  <span class="project-category">Mobile Application / Academic Project</span>
+                </div>
+                <h3 class="project-card-title">OFPPT Mobile Student Portal</h3>
+                <p class="project-card-desc">
+                  Application Android développée avec Kotlin et XML permettant aux stagiaires d'accéder aux fonctionnalités scolaires, emplois du temps et résultats avec mise en cache locale.
+                </p>
+
+                <div class="project-tech-meta">
+                  <span class="tech-highlight">Kotlin</span>
+                  <span class="meta-separator">·</span>
+                  <span class="tech-highlight">XML Layouts</span>
+                  <span class="meta-separator">·</span>
+                  <span>Android Studio</span>
+                  <span class="meta-separator">·</span>
+                  <span>HTTP Client</span>
+                  <span class="meta-separator">·</span>
+                  <span>SQLite</span>
+                </div>
+
+                <div class="project-actions-row">
+                  <button class="btn-primary" data-project-trigger="ofppt-app">
+                    <span>View Case Study</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </button>
+                  <a href="https://github.com/ZakHallaji" target="_blank" rel="noopener noreferrer" class="btn-text-link">
+                    <span>GitHub Code</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-visual-frame" data-project-trigger="ofppt-app">
+                <img
+                  src="assets/images/ofppt-app.jpg"
+                  alt="OFPPT Mobile Student Portal — Application Android pour stagiaires"
+                  class="project-mockup-img"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Experience & Formation Section (Chapter 04) -->
+      <section id="experience" class="editorial-section" style="background: #0d0e12; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+        <div class="container">
+          <div class="section-chapter">
+            <span class="chapter-number">04 / EXPERIENCE</span>
+            <span class="chapter-title">Timeline &amp; Career Track</span>
+          </div>
+
+          <div class="timeline-editorial-grid">
+            <!-- Experience Column -->
+            <div class="timeline-column reveal-on-scroll">
+              <h3 class="timeline-column-header">Expérience &amp; Projets Réalisés</h3>
+              <div class="timeline-entries">
+                <div class="timeline-entry">
+                  <div class="entry-year">2024 – 2025</div>
+                  <h4 class="entry-role">Développeur &amp; Support Technique</h4>
+                  <div class="entry-company">ANAPEC / Twily</div>
+                  <p class="entry-desc">
+                    Assistance technique auprès des utilisateurs, dépannage applicatif, participation aux tests d'intégration d'une plateforme de paiement et optimisation des outils numériques internes.
+                  </p>
+                  <div class="entry-skills-meta">
+                    <span>Support Technique</span> · <span>Plateforme Paiement</span> · <span>Troubleshooting</span> · <span>Outils Digitaux</span>
+                  </div>
+                </div>
+
+                <div class="timeline-entry">
+                  <div class="entry-year">2024 – Présent</div>
+                  <h4 class="entry-role">Développeur Mobile &amp; SaaS Indépendant</h4>
+                  <div class="entry-company">Projets Personnels &amp; Produits Déployés</div>
+                  <p class="entry-desc">
+                    Conception complète d'architectures mobiles Android (Kotlin / MVVM) et de backends Python (FastAPI). Développement de MobiBiz Maroc et d'outils de traitement documentaire.
+                  </p>
+                  <div class="entry-skills-meta">
+                    <span>Kotlin</span> · <span>FastAPI</span> · <span>Android SDK</span> · <span>REST APIs</span> · <span>SQL</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Education Column -->
+            <div class="timeline-column reveal-on-scroll">
+              <h3 class="timeline-column-header">Formation Académique</h3>
+              <div class="timeline-entries">
+                <div class="timeline-entry">
+                  <div class="entry-year">2023 – 2025</div>
+                  <h4 class="entry-role">Technicien Spécialisé en Développement Digital</h4>
+                  <div class="entry-company">OFPPT — Marrakech, Maroc</div>
+                  <p class="entry-desc">
+                    Formation approfondie axée sur le développement mobile et web: programmation orientée objet, architecture logicielle, bases de données relationnelles, intégration d'APIs et gestion de projets agiles.
+                  </p>
+                  <div class="entry-skills-meta">
+                    <span>Développement Mobile</span> · <span>Kotlin</span> · <span>Web Technologies</span> · <span>Bases de données</span>
+                  </div>
+                </div>
+
+                <div class="timeline-entry">
+                  <div class="entry-year">En continu</div>
+                  <h4 class="entry-role">Auto-formation &amp; Veille Technologique</h4>
+                  <div class="entry-company">Écosystème Mobile &amp; Cloud</div>
+                  <p class="entry-desc">
+                    Approfondissement continu de Flutter/Dart pour le cross-platform, perfectionnement de Jetpack Compose et des patrons d'architecture Clean Architecture sous Android.
+                  </p>
+                  <div class="entry-skills-meta">
+                    <span>Flutter</span> · <span>Jetpack Compose</span> · <span>Clean Architecture</span> · <span>CI/CD Mobile</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. Why Work With Me Section (Chapter 05) -->
+      <section class="editorial-section">
+        <div class="container">
+          <div class="section-chapter">
+            <span class="chapter-number">05 / VALUE</span>
+            <span class="chapter-title">What I Bring to a Team</span>
+          </div>
+
+          <div class="section-header">
+            <h2 class="section-title">What I Bring</h2>
+            <p class="section-subtitle">
+              Une démarche pragmatique combinant vision produit, rigueur technique et maîtrise de la chaîne mobile complète.
+            </p>
+          </div>
+
+          <div class="value-pillars-grid">
+            <div class="pillar-card reveal-on-scroll">
+              <div>
+                <span class="pillar-number">01</span>
+                <h3 class="pillar-title">Mobile First</h3>
+                <p class="pillar-desc">
+                  Création d'expériences mobiles natives Android et cross-platform où la réactivité tactile, la gestion des états et la fluidité d'affichage priment.
+                </p>
+              </div>
+            </div>
+
+            <div class="pillar-card reveal-on-scroll">
+              <div>
+                <span class="pillar-number">02</span>
+                <h3 class="pillar-title">API &amp; Backend</h3>
+                <p class="pillar-desc">
+                  Compréhension approfondie des contrats client-serveur, structuration d'APIs REST avec FastAPI, sérialisation propre et modélisation de bases SQL.
+                </p>
+              </div>
+            </div>
+
+            <div class="pillar-card reveal-on-scroll">
+              <div>
+                <span class="pillar-number">03</span>
+                <h3 class="pillar-title">Product Thinking</h3>
+                <p class="pillar-desc">
+                  Priorité accordée aux fonctionnalités tangibles qui résolvent un vrai problème utilisateur plutôt qu'à la complexité inutile.
+                </p>
+              </div>
+            </div>
+
+            <div class="pillar-card reveal-on-scroll">
+              <div>
+                <span class="pillar-number">04</span>
+                <h3 class="pillar-title">Continuous Learning</h3>
+                <p class="pillar-desc">
+                  Curiosité active et rigueur constante pour adopter les standards modernes de développement mobile, tester et itérer rapidement.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. Technical Code & GitHub Section (Chapter 06) -->
+      <section class="code-section">
+        <div class="container">
+          <div class="section-chapter">
+            <span class="chapter-number">06 / CODE &amp; GITHUB</span>
+            <span class="chapter-title">Engineering Discipline</span>
+          </div>
+
+          <div class="terminal-container reveal-on-scroll">
+            <div class="terminal-bar">
+              <div class="terminal-dots">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+              </div>
+              <span class="terminal-path">zakaria@mobile-workstation:~/dev</span>
+              <span></span>
+            </div>
+
+            <div class="terminal-body">
+              <div class="terminal-command">$ gh repo list ZakHallaji --visibility public</div>
+              <div class="terminal-output">
+                Found active Android &amp; Web repositories under https://github.com/ZakHallaji
+              </div>
+
+              <div class="repo-card-grid">
+                <a href="https://github.com/ZakHallaji" target="_blank" rel="noopener noreferrer" class="repo-mini-card">
+                  <div class="repo-name">MobiBiz-Maroc-Android</div>
+                  <div class="repo-desc">Native Android commercial management app with Retrofit &amp; Coroutines.</div>
+                  <div class="repo-lang">
+                    <span class="lang-dot kotlin"></span>
+                    <span>Kotlin</span>
+                  </div>
+                </a>
+
+                <a href="https://github.com/ZakHallaji" target="_blank" rel="noopener noreferrer" class="repo-mini-card">
+                  <div class="repo-name">MobiBiz-FastAPI-Backend</div>
+                  <div class="repo-desc">High-performance REST API backend powering mobile clients with SQLAlchemy.</div>
+                  <div class="repo-lang">
+                    <span class="lang-dot python"></span>
+                    <span>Python / FastAPI</span>
+                  </div>
+                </a>
+
+                <a href="https://github.com/ZakHallaji" target="_blank" rel="noopener noreferrer" class="repo-mini-card">
+                  <div class="repo-name">social-manager-saas</div>
+                  <div class="repo-desc">SaaS platform for multi-channel social scheduling &amp; content calendar.</div>
+                  <div class="repo-lang">
+                    <span class="lang-dot javascript"></span>
+                    <span>JavaScript</span>
+                  </div>
+                </a>
+              </div>
+
+              <div style="margin-top: 1.5rem;">
+                <a href="https://github.com/ZakHallaji" target="_blank" rel="noopener noreferrer" class="btn-text-link" style="color: var(--accent);">
+                  <span>Explore my GitHub →</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. Contact Section (Chapter 07) -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="section-chapter">
+            <span class="chapter-number">07 / CONTACT</span>
+            <span class="chapter-title">Get in Touch</span>
+          </div>
+
+          <div class="contact-layout-grid">
+            <div class="contact-callout reveal-on-scroll">
+              <h2 class="contact-headline">
+                HAVE A PROJECT<br />
+                OR AN OPPORTUNITY?
+              </h2>
+              <p class="contact-lead">
+                I'm currently open to opportunities in mobile development, Android, Flutter and digital products. Discutons de vos besoins techniques.
+              </p>
+
+              <div class="contact-channels">
+                <a href="mailto:zakariaehallaji@gmail.com" class="contact-channel-item">
+                  <div class="channel-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="channel-label">Email Direct</div>
+                    <div class="channel-value">zakariaehallaji@gmail.com</div>
+                  </div>
+                </a>
+
+                <a href="https://github.com/ZakHallaji" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
+                  <div class="channel-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="channel-label">GitHub Repository</div>
+                    <div class="channel-value">github.com/ZakHallaji</div>
+                  </div>
+                </a>
+
+                <div class="contact-channel-item btn-open-cv" style="cursor: pointer;">
+                  <div class="channel-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                      <polyline points="14 2 14 8 20 8"></polyline>
+                      <line x1="16" y1="13" x2="8" y2="13"></line>
+                      <line x1="16" y1="17" x2="8" y2="17"></line>
+                      <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="channel-label">Curriculum Vitae</div>
+                    <div class="channel-value">Consulter / Télécharger le CV (PDF/TXT)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-container reveal-on-scroll">
+              <h3 class="contact-form-title">Envoyer un message</h3>
+              <p class="contact-form-subtitle">
+                Remplissez ce formulaire pour m'écrire directement via votre messagerie.
+              </p>
+
+              <form id="portfolio-contact-form" class="contact-form" novalidate>
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Votre Nom &amp; Entreprise</label>
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    class="form-input"
+                    placeholder="Ex: Sarah Benali (Recruteur / Entreprise)"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Adresse Email</label>
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    class="form-input"
+                    placeholder="sarah@entreprise.com"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-message" class="form-label">Message ou Détails de l'opportunité</label>
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    class="form-textarea"
+                    placeholder="Bonjour Zakaria, nous recherchons un développeur mobile pour..."
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary" style="justify-content: center; width: 100%;">
+                  <span>Envoyer le message</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+
+                <div id="form-feedback-message" class="form-feedback" role="alert"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 11. Minimal Editorial Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-bio">
+          <span class="footer-name">Zakaria Hallaji</span>
+          <span class="footer-tagline">Mobile Developer · Kotlin · Flutter · Android · Marrakech, Morocco</span>
+        </div>
+
+        <div class="footer-links">
+          <a href="https://github.com/ZakHallaji" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="mailto:zakariaehallaji@gmail.com">Email</a>
+          <button class="btn-open-cv">CV</button>
+          <a href="#hero">Back to top ↑</a>
+        </div>
+
+        <div class="footer-copy">
+          © 2026 Zakaria Hallaji. Built with Semantic HTML5, CSS3 &amp; Vanilla JavaScript.
+        </div>
+      </div>
+    </footer>
+
+    <!-- 12. Fullscreen Project Case Study Modal -->
+    <div id="project-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <div class="modal-header-meta">
+            <span id="modal-project-category" class="modal-category">Mobile Application</span>
+            <span class="meta-separator">·</span>
+            <span id="modal-project-year" class="modal-year">2025</span>
+          </div>
+          <button id="modal-close-btn" class="modal-close-btn" aria-label="Fermer la vue détaillée (Échap)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="modal-hero-visual">
+            <img id="modal-project-image" src="" alt="Aperçu du projet" loading="lazy" />
+          </div>
+
+          <div class="modal-title-lockup">
+            <h3 id="modal-project-title" class="modal-title">Project Title</h3>
+            <p id="modal-project-tagline" class="modal-tagline">Project Tagline</p>
+          </div>
+
+          <!-- Problem & Solution -->
+          <div class="modal-grid-two">
+            <div>
+              <h4 class="case-block-title">01 / Problématique</h4>
+              <p id="modal-project-problem" class="case-block-text">Description du problème...</p>
+            </div>
+            <div>
+              <h4 class="case-block-title">02 / Solution Apportée</h4>
+              <p id="modal-project-solution" class="case-block-text">Description de la solution...</p>
+            </div>
+          </div>
+
+          <!-- Technical Architecture -->
+          <div class="case-architecture-box">
+            <h4 class="case-block-title">Architecture &amp; Flux de Données</h4>
+            <div id="modal-project-architecture" class="arch-flow-diagram">
+              Android MVVM ──▶ Retrofit ──▶ FastAPI ──▶ MySQL
+            </div>
+          </div>
+
+          <!-- Key Features -->
+          <div>
+            <h4 class="case-block-title" style="margin-bottom: 1.25rem;">Fonctionnalités Clés &amp; Modules</h4>
+            <div id="modal-project-features" class="features-breakdown-grid"></div>
+          </div>
+
+          <!-- Tech Stack Meta -->
+          <div>
+            <h4 class="case-block-title">Technologies Utilisées</h4>
+            <div id="modal-project-tech" class="project-tech-meta" style="margin-bottom: 0;"></div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <a id="modal-github-link" href="https://github.com/ZakHallaji" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            <span>Explorer le code sur GitHub</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+          <button class="btn-primary" onclick="document.getElementById('modal-close-btn').click();">
+            <span>Fermer le projet</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13. Curriculum Vitae (CV) Modal -->
+    <div id="cv-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal-dialog" style="max-width: 840px;">
+        <div class="modal-header">
+          <div class="modal-header-meta">
+            <span class="modal-category">Curriculum Vitae</span>
+            <span class="meta-separator">·</span>
+            <span class="modal-year">Zakaria Hallaji</span>
+          </div>
+          <button id="cv-modal-close-btn" class="modal-close-btn" aria-label="Fermer l'aperçu du CV (Échap)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="cv-preview-paper">
+            <div class="cv-header-block">
+              <h2 class="cv-name">Zakaria Hallaji</h2>
+              <div class="cv-role-sub">Mobile Developer — Kotlin &amp; Flutter | Android &amp; SaaS</div>
+              <div class="cv-contact-row">
+                <span>📍 Marrakech, Maroc</span>
+                <span>✉️ zakariaehallaji@gmail.com</span>
+                <span>🔗 github.com/ZakHallaji</span>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="cv-section-title">Profil &amp; Objectif</h4>
+              <p style="line-height: 1.6;">
+                Développeur mobile spécialisé en Kotlin et Flutter, orienté produit. Expérience pratique dans la création d'applications Android natives (MVVM), l'intégration d'APIs REST asynchrones et le développement de backends SaaS avec Python / FastAPI. Disponible pour opportunités professionnelles.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="cv-section-title">Compétences Techniques</h4>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; line-height: 1.6;">
+                <div>
+                  <strong>Mobile:</strong> Kotlin, Android SDK, XML Layouts, Material Design 3, Coroutines, Flutter, Dart, Firebase.
+                </div>
+                <div>
+                  <strong>Backend &amp; Data:</strong> Python, FastAPI, SQLAlchemy, REST APIs, MySQL, SQLite / Room.
+                </div>
+                <div>
+                  <strong>Web &amp; Outils:</strong> JavaScript (ES6+), HTML5, CSS3, Git, GitHub, Android Studio, Postman, Figma.
+                </div>
+                <div>
+                  <strong>Langues:</strong> Français (Courant / Professionnel), Arabe (Natif), Anglais (Technique).
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="cv-section-title">Projets Majeurs</h4>
+              <ul style="display: flex; flex-direction: column; gap: 0.75rem; line-height: 1.5;">
+                <li>
+                  <strong>MobiBiz Maroc (Mobile Commercial Management):</strong> Application Android native (Kotlin, Retrofit, FastAPI, MySQL, Firebase) pour la gestion des stocks, ventes, clients et facturation des PME.
+                </li>
+                <li>
+                  <strong>Social Media Manager SaaS:</strong> Plateforme web pour la planification et l'analyse de publications sociales.
+                </li>
+                <li>
+                  <strong>PDF Update Platform:</strong> Application web de manipulation et fusion de documents PDF via un moteur Python.
+                </li>
+                <li>
+                  <strong>OFPPT Student Portal:</strong> Application Android d'accès académique avec cache local SQLite.
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="cv-section-title">Expérience &amp; Formation</h4>
+              <div style="display: flex; flex-direction: column; gap: 0.75rem; line-height: 1.5;">
+                <div>
+                  <strong>Développeur &amp; Support Technique</strong> · ANAPEC / Twily (2024–2025)
+                  <div style="font-size: 0.8125rem; color: var(--text-muted);">Assistance technique, tests plateforme de paiement, troubleshooting et outils digitaux.</div>
+                </div>
+                <div>
+                  <strong>Technicien Spécialisé en Développement Digital</strong> · OFPPT Marrakech (2023–2025)
+                  <div style="font-size: 0.8125rem; color: var(--text-muted);">Spécialisation Web &amp; Mobile, modélisation de données et conception logicielle.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button id="download-cv-action" class="btn-primary">
+            <span>Télécharger le CV (.txt formaté)</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </button>
+          <a href="mailto:zakariaehallaji@gmail.com?subject=Opportunité%20Professionnelle%20pour%20Zakaria%20Hallaji" class="btn-secondary">
+            <span>Contacter par Email</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts (Modular Vanilla JS, fully runnable without build step) -->
+    <script src="./js/projects.js"></script>
+    <script src="./js/animations.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
