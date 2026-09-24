@@ -18,7 +18,7 @@
       property="og:description"
       content="Portfolio de Zakaria Hallaji, Développeur Mobile spécialisé en Kotlin, Android et Flutter basé à Marrakech, Maroc."
     />
-    <meta property="og:image" content="assets/images/mobibiz.jpg" />
+    <meta property="og:image" content="assets/images/zakaria.jpg" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -27,7 +27,7 @@
       name="twitter:description"
       content="Portfolio de Zakaria Hallaji, Développeur Mobile spécialisé en Kotlin, Android et Flutter."
     />
-    <meta name="twitter:image" content="assets/images/mobibiz.jpg" />
+    <meta name="twitter:image" content="assets/images/zakaria.jpg" />
 
     <!-- Google Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -148,15 +148,65 @@
             </div>
           </div>
 
-          <!-- Kicker -->
-          <p class="hero-kicker">HELLO, I'M ZAKARIA</p>
+          <!-- Hero Main Split Grid -->
+          <div class="hero-main-grid">
+            <div class="hero-text-col">
+              <!-- Kicker -->
+              <p class="hero-kicker">HELLO, I'M ZAKARIA</p>
 
-          <!-- Main Headline -->
-          <h1 class="hero-headline">
-            I BUILD MOBILE<br />
-            EXPERIENCES THAT<br />
-            <span class="headline-accent">FEEL SIMPLE.</span>
-          </h1>
+              <!-- Main Headline -->
+              <h1 class="hero-headline">
+                I BUILD MOBILE<br />
+                EXPERIENCES THAT<br />
+                <span class="headline-accent">FEEL SIMPLE.</span>
+              </h1>
+            </div>
+
+            <div class="hero-portrait-col">
+              <div class="hero-portrait-card reveal-on-scroll" id="hero-portrait-card" title="Cliquez ou glissez votre photo pour la remplacer">
+                <div class="portrait-glow-backdrop" aria-hidden="true"></div>
+                <div class="portrait-image-wrapper">
+                  <img
+                    src="assets/images/zakaria.jpg"
+                    alt="Zakaria Hallaji — Mobile Developer"
+                    class="hero-portrait-img user-portrait-target"
+                    loading="eager"
+                  />
+                  <div class="portrait-upload-hint">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                      <circle cx="12" cy="13" r="4"></circle>
+                    </svg>
+                    <span>Cliquez pour utiliser votre vraie photo</span>
+                    <span style="font-size: 0.6875rem; color: var(--accent); font-family: var(--font-mono);">Sans modification IA</span>
+                  </div>
+                  <div class="portrait-badge-top">
+                    <span class="status-beacon"></span>
+                    <span>Zakaria Hallaji</span>
+                  </div>
+                  <div class="portrait-info-glass">
+                    <div class="portrait-title-line">
+                      <span class="portrait-dev-role">Mobile Developer</span>
+                      <span class="portrait-location">📍 Marrakech</span>
+                    </div>
+                    <div class="portrait-pills-row">
+                      <span class="portrait-mini-pill">Kotlin</span>
+                      <span class="portrait-mini-pill">Flutter</span>
+                      <span class="portrait-mini-pill">Android</span>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="btn-upload-badge" id="btn-trigger-photo-upload" aria-label="Choisir votre photo originale">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                  </svg>
+                  <span>Changer / Utiliser ma vraie photo</span>
+                </button>
+              </div>
+            </div>
+          </div>
 
           <!-- Subrow: Role, Dynamic Words, CTAs -->
           <div class="hero-subrow">
@@ -236,35 +286,61 @@
           </div>
 
           <div class="about-grid">
-            <div class="about-bio reveal-on-scroll">
-              <p class="about-paragraph">
-                Je suis <strong>Zakaria Hallaji</strong>, développeur mobile orienté produit, spécialisé dans <strong>Kotlin</strong>, <strong>Android</strong> et <strong>Flutter</strong>.
-              </p>
-              <p class="about-paragraph">
-                Je m'intéresse particulièrement aux applications mobiles modernes, aux APIs, aux plateformes SaaS et aux outils qui résolvent de vrais problèmes du quotidien pour les utilisateurs et les entreprises.
-              </p>
-              <p class="about-paragraph">
-                Basé à Marrakech, j'aborde le développement avec un regard pragmatique: concevoir des architectures claires (MVVM, Clean Code), garantir une expérience utilisateur fluide sans latence, et maintenir une intégration réseau irréprochable avec les backends.
-              </p>
+            <!-- Left: Editorial Portrait Card -->
+            <div class="about-portrait-card reveal-on-scroll" id="about-portrait-card" title="Cliquez pour remplacer par votre vraie photo" style="cursor: pointer;">
+              <div class="about-portrait-img-box">
+                <img
+                  src="assets/images/zakaria.jpg"
+                  alt="Portrait professionnel de Zakaria Hallaji"
+                  class="about-portrait-img user-portrait-target"
+                  loading="lazy"
+                />
+              </div>
+              <div class="about-portrait-meta">
+                <div class="about-portrait-name">Zakaria Hallaji</div>
+                <div class="about-portrait-role">Mobile &amp; Product Developer</div>
+                <div class="about-portrait-location">📍 Marrakech, Morocco</div>
+                <button type="button" class="btn-upload-badge btn-trigger-photo-about" style="margin-top: 0.5rem;" aria-label="Choisir votre photo originale">
+                  📷 Utiliser ma vraie photo
+                </button>
+              </div>
             </div>
 
-            <div class="about-creds-card reveal-on-scroll">
-              <div class="card-kicker">Formation Académique</div>
-              <h3 class="cred-title">Technicien Spécialisé — Développement Digital</h3>
-              <p class="cred-institution">OFPPT Marrakech · Option Web &amp; Mobile</p>
-              
-              <div class="cred-bullets">
-                <div class="cred-bullet-item">
-                  <span class="bullet-icon">→</span>
-                  <span>Conception et développement d'applications mobiles Android natives avec Kotlin &amp; XML.</span>
-                </div>
-                <div class="cred-bullet-item">
-                  <span class="bullet-icon">→</span>
-                  <span>Modélisation de bases de données relationnelles SQL et consommation d'APIs REST.</span>
-                </div>
-                <div class="cred-bullet-item">
-                  <span class="bullet-icon">→</span>
-                  <span>Pratiques rigoureuses de gestion de version (Git/GitHub) et tests applicatifs.</span>
+            <!-- Hidden Global File Input for Photo Replacement -->
+            <input type="file" id="real-photo-input" accept="image/*" style="display: none;" aria-hidden="true" />
+
+            <!-- Right: Bio Narrative & Credentials Card -->
+            <div class="about-content-col">
+              <div class="about-bio reveal-on-scroll">
+                <p class="about-paragraph">
+                  Je suis <strong>Zakaria Hallaji</strong>, développeur mobile orienté produit, spécialisé dans <strong>Kotlin</strong>, <strong>Android</strong> et <strong>Flutter</strong>.
+                </p>
+                <p class="about-paragraph">
+                  Je m'intéresse particulièrement aux applications mobiles modernes, aux APIs, aux plateformes SaaS et aux outils qui résolvent de vrais problèmes du quotidien pour les utilisateurs et les entreprises.
+                </p>
+                <p class="about-paragraph">
+                  Basé à Marrakech, j'aborde le développement avec un regard pragmatique: concevoir des architectures claires (MVVM, Clean Code), garantir une expérience utilisateur fluide sans latence, et maintenir une intégration réseau irréprochable avec les backends.
+                </p>
+              </div>
+
+              <div class="about-creds-card reveal-on-scroll">
+                <div class="card-kicker">Formation Académique</div>
+                <h3 class="cred-title">Technicien Spécialisé — Développement Digital</h3>
+                <p class="cred-institution">OFPPT Marrakech · Option Web &amp; Mobile</p>
+                
+                <div class="cred-bullets">
+                  <div class="cred-bullet-item">
+                    <span class="bullet-icon">→</span>
+                    <span>Conception et développement d'applications mobiles Android natives avec Kotlin &amp; XML.</span>
+                  </div>
+                  <div class="cred-bullet-item">
+                    <span class="bullet-icon">→</span>
+                    <span>Modélisation de bases de données relationnelles SQL et consommation d'APIs REST.</span>
+                  </div>
+                  <div class="cred-bullet-item">
+                    <span class="bullet-icon">→</span>
+                    <span>Pratiques rigoureuses de gestion de version (Git/GitHub) et tests applicatifs.</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1048,12 +1124,22 @@
         <div class="modal-body">
           <div class="cv-preview-paper">
             <div class="cv-header-block">
-              <h2 class="cv-name">Zakaria Hallaji</h2>
-              <div class="cv-role-sub">Mobile Developer — Kotlin &amp; Flutter | Android &amp; SaaS</div>
-              <div class="cv-contact-row">
-                <span>📍 Marrakech, Maroc</span>
-                <span>✉️ zakariaehallaji@gmail.com</span>
-                <span>🔗 github.com/ZakHallaji</span>
+              <div style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;">
+                <img
+                  src="assets/images/zakaria.jpg"
+                  alt="Zakaria Hallaji"
+                  class="user-portrait-target"
+                  style="width: 76px; height: 76px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent); flex-shrink: 0;"
+                />
+                <div>
+                  <h2 class="cv-name" style="margin-bottom: 0.25rem;">Zakaria Hallaji</h2>
+                  <div class="cv-role-sub">Mobile Developer — Kotlin &amp; Flutter | Android &amp; SaaS</div>
+                  <div class="cv-contact-row">
+                    <span>📍 Marrakech, Maroc</span>
+                    <span>✉️ zakariaehallaji@gmail.com</span>
+                    <span>🔗 github.com/ZakHallaji</span>
+                  </div>
+                </div>
               </div>
             </div>
 

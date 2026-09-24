@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initProjectModals();
   initCvModal();
   initContactForm();
+  initPhotoManager();
 });
 
 /**
@@ -350,4 +351,133 @@ function escapeHtml(string) {
   const div = document.createElement("div");
   div.textContent = string;
   return div.innerHTML;
+}
+
+/**
+ * 5. Photo Manager — Original User Photo Upload & Persistence
+ * Ensures Zakaria's exact real photo is never altered by AI and persists across sessions
+ */
+function initPhotoManager() {
+  const photoInput = document.getElementById("real-photo-input");
+  const heroCard = document.getElementById("hero-portrait-card");
+  const aboutCard = document.getElementById("about-portrait-card");
+  const uploadBtns = document.querySelectorAll(
+    "#btn-trigger-photo-upload, .btn-trigger-photo-about"
+  );
+  const targets = document.querySelectorAll(".user-portrait-target");
+
+  // 1. Check if user already stored their exact photo in localStorage
+  const storedPhoto = localStorage.getItem("zakaria_user_photo");
+  if (storedPhoto) {
+    applyPhoto(storedPhoto);
+  }
+
+  function applyPhoto(dataUrl) {
+    targets.forEach((img) => {
+      img.src = dataUrl;
+      img.srcset = "";
+    });
+  }
+
+  // 2. Trigger file picker
+  uploadBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (photoInput) photoInput.click();
+    });
+  });
+
+  if (heroCard) {
+    heroCard.addEventListener("click", (e) => {
+      if (e.target.closest("a") || e.target.closest("button")) return;
+      if (photoInput) photoInput.click();
+    });
+
+    // Drag and drop support
+    heroCard.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      heroCard.classList.add("drag-over");
+    });
+
+    heroCard.addEventListener("dragleave", () => {
+      heroCard.classList.remove("drag-over");
+    });
+
+    heroCard.addEventListener("drop", (e) => {
+      e.preventDefault();
+      heroCard.classList.remove("drag-over");
+      if (e.dataTransfer && e.dataTransfer.files.length > 0) {
+        handleFile(e.dataTransfer.files[0]);
+      }
+    });
+  }
+
+  if (aboutCard) {
+    aboutCard.addEventListener("click", (e) => {
+      if (e.target.closest("a") || e.target.closest("button")) return;
+      if (photoInput) photoInput.click();
+    });
+  }
+
+  if (photoInput) {
+    photoInput.addEventListener("change", (e) => {
+      if (e.target.files && e.target.files[0]) {
+        handleFile(e.target.files[0]);
+      }
+    });
+  }
+
+  function handleFile(file) {
+    if (!file.type.startsWith("image/")) {
+      showToast("Veuillez sélectionner un fichier image valide.", true);
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const dataUrl = event.target.result;
+      applyPhoto(dataUrl);
+
+      // Save to localStorage for instant persistence across reloads
+      try {
+        localStorage.setItem("zakaria_user_photo", dataUrl);
+      } catch (err) {
+        console.warn("Storage quota exceeded", err);
+      }
+
+      // Save to server backend
+      fetch("/api/upload-photo", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ image: dataUrl }),
+      })
+        .then((res) => res.json())
+        .then(() => {
+          showToast("Votre photo originale a été enregistrée avec succès !", false);
+        })
+        .catch(() => {
+          showToast("Photo originale appliquée !", false);
+        });
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function showToast(message, isError) {
+    let toast = document.getElementById("photo-toast");
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.id = "photo-toast";
+      toast.style.cssText =
+        "position: fixed; bottom: 2rem; right: 2rem; background: #111215; color: #fff; padding: 0.875rem 1.5rem; border-radius: 6px; border: 1px solid var(--accent); box-shadow: 0 10px 30px rgba(0,0,0,0.5); z-index: 10000; font-family: var(--font-display); font-size: 0.875rem; transition: transform 0.3s ease, opacity 0.3s ease; opacity: 0; transform: translateY(10px); pointer-events: none;";
+      document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.style.borderColor = isError ? "#ef4444" : "var(--accent)";
+    toast.style.opacity = "1";
+    toast.style.transform = "translateY(0)";
+    setTimeout(() => {
+      toast.style.opacity = "0";
+      toast.style.transform = "translateY(10px)";
+    }, 4000);
+  }
 }
